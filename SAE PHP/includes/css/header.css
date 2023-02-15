@@ -1,0 +1,167 @@
+.header{
+    height: 450px;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+}
+
+.header__texture{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;left: 0;
+    background-color: #2c3e50;
+    background-size: cover;
+    z-index: 1;
+}
+
+.header__mask{
+    position: absolute;
+    bottom: 0;
+    background: 0 0;
+    height: 42px;
+    width: 100%;
+    z-index: 10;
+}
+
+
+.header__navbar{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__navbar--logo--title{
+    color: #fff;
+    font-size: 38px;
+    font-family: 'Courier', sans-serif;
+    font-weight: bold;
+}
+
+.header__navbar--menu--link{
+    margin-left: 40px;
+    color: #fff;
+    text-decoration: none;
+}
+.header__navbar--menu--link:hover{
+    text-decoration: underline;
+}
+
+.header__slogan{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.h__slogan--title{
+    color: #fff;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 2px;
+}
+
+.h__slogan--btn{
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 15px 20px;
+    background-color: #e74c3c;
+    border-radius: 4px;
+}
+
+.header__navbar-toogle{
+    width: 40px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+}
+
+.header__navbar-toogle-icons,.header__navbar-toogle-icons:before,.header__navbar-toogle-icons:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    position: relative;
+    background: #FFF;
+}
+
+.header__navbar-toogle-icons:before{top: 10px}
+.header__navbar-toogle-icons:after{top: -14px}
+
+.is-open .header__navbar--menu{
+    transform: translateY(0);
+}
+
+@media only screen and (max-width: 900px){
+    .container{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .header__navbar-toogle{
+        display: flex;
+        z-index: 1000;
+    }
+    .header__navbar--menu{
+        transition: all 0.3s ease-in-out;
+        transform: translateY(-120%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100vh;
+        height:100vh;
+        background: #e74c3c;
+        z-index: 0;
+        top: 0; left: 0;
+        width: 100%;
+    }
+    .h__slogan--title{
+        color: #fff;
+        font-size: 25px;
+        text-transform: uppercase;
+        font-family: 'JetBrains Mono', monospace;
+        letter-spacing: 2px;
+    }
+    .header__navbar--menu--link{
+        margin: 20px 0;
+        font-family: cursive;
+        font-size: 24px;
+    }
+    .h__slogan--title{
+        font-size: 40px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .h__slogan--title{
+        color: #fff;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-family: 'JetBrains Mono', monospace;
+        letter-spacing: 2px;
+    }
+    .h__slogan--btn{
+        color: #fff;
+        font-size: 12px;
+        text-decoration: none;
+        padding: 7px 15px;
+        background-color: #e74c3c;
+        border-radius: 4px;
+    }
+}
+
+@media screen and (max-width: 30em){
+h1 {
+    font-sitze: 1.5em;
+  }
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
